@@ -13,11 +13,16 @@ namespace ProcessReceiver
             ServiceBusEnvironment.SystemConnectivity.Mode = ConnectivityMode.Http;
 
             var manager = NamespaceManager.Create();
-            if (manager.SubscriptionExists("topic", "process"))
-                manager.DeleteSubscription("topic", "process");
+			if ( manager.SubscriptionExists( "topic", "process" ) )
+			{
+				manager.DeleteSubscription( "topic", "process" );
+			}
 
-            manager.CreateSubscription("topic", "process", new SqlFilter("Value < 500"));
-            
+			if ( !manager.SubscriptionExists( "topic", "process" ) )
+			{
+				manager.CreateSubscription( "topic", "process", new SqlFilter( "Value < 500" ) );
+			}
+
             var client = SubscriptionClient.Create("topic", "process");
             
             while (true)
@@ -30,7 +35,7 @@ namespace ProcessReceiver
 
                 message.Complete();
 
-                Thread.Sleep(2000);
+                Thread.Sleep(100);
             }
         }
     }

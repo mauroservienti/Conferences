@@ -6,28 +6,30 @@ using Microsoft.ServiceBus.Messaging;
 
 namespace MonitoringReceiver
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            ServiceBusEnvironment.SystemConnectivity.Mode = ConnectivityMode.Http;
+	class Program
+	{
+		static void Main( string[] args )
+		{
+			ServiceBusEnvironment.SystemConnectivity.Mode = ConnectivityMode.Http;
 
-            var manager = NamespaceManager.Create();
-            if (!manager.TopicExists("topic"))
-                manager.CreateTopic("topic");
+			var manager = NamespaceManager.Create();
+			if ( !manager.TopicExists( "topic" ) )
+				manager.CreateTopic( "topic" );
 
+			if ( !manager.SubscriptionExists( "topic", "monitoring" ) )
+				manager.CreateSubscription( "topic", "monitoring" );
 
-            var client = SubscriptionClient.Create("topic", "monitoring");
-            while (true)
-            {
-                var message = client.Receive();
-                var body = message.GetBody<Message>();
-                Console.WriteLine("{0} - {1}", body.Id, body.Value);
+			var client = SubscriptionClient.Create( "topic", "monitoring" );
+			while ( true )
+			{
+				var message = client.Receive();
+				var body = message.GetBody<Message>();
+				Console.WriteLine( "{0} - {1}", body.Id, body.Value );
 
-                message.Complete();
+				message.Complete();
 
-                Thread.Sleep(2000);
-            }
-        }
-    }
+				Thread.Sleep( 100 );
+			}
+		}
+	}
 }

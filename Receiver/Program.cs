@@ -17,8 +17,10 @@ namespace Receiver
             ServiceBusEnvironment.SystemConnectivity.Mode = ConnectivityMode.Http;
             
             var manager = NamespaceManager.Create();
-            if (!manager.QueueExists("queue"))
-                manager.CreateQueue("queue");
+			if ( !manager.QueueExists( "queue" ) )
+			{
+				manager.CreateQueue( "queue" );
+			}
 
             var queue = QueueClient.Create("queue");
             Console.WriteLine("RECEIVER");
@@ -27,11 +29,11 @@ namespace Receiver
                 var message = queue.Receive();
                 var body = message.GetBody<Message>();
 
-                Console.WriteLine(body.Id);
+                Console.WriteLine("Received message w/ Id: {0}", body.Id);
                 
                 message.Complete();
 
-                Thread.Sleep(2000);
+                Thread.Sleep(200);
             }
         }
 

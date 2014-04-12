@@ -15,14 +15,10 @@ namespace Sender
             ServiceBusEnvironment.SystemConnectivity.Mode = ConnectivityMode.Http;
 
             var manager = NamespaceManager.Create();
-            if (!manager.QueueExists("queue"))
-                manager.CreateQueue("queue");
-
-            //var factory = MessagingFactory.Create
-            //    (
-            //        ServiceBusEnvironment.CreateServiceUri("sb", "dotnetmarche", String.Empty),
-            //        TokenProvider.CreateSharedSecretTokenProvider("owner", "TZHxaTz2ckLrjd9ReIRNWoaJz0yqFyGw49AoT9BacmI=")
-            //    );
+			if ( !manager.QueueExists( "queue" ) )
+			{
+				manager.CreateQueue( "queue" );
+			}
 
             var client = QueueClient.Create("queue");
             Console.WriteLine("SENDER");
@@ -30,9 +26,9 @@ namespace Sender
             {
                 var message = new BrokeredMessage(new Message());
                 client.Send(message);
-                Console.WriteLine(".");
+                Console.Write(".");
 
-                Thread.Sleep(500);
+                Thread.Sleep(100);
             }
         }
     }

@@ -13,17 +13,19 @@ namespace TopicSender
             ServiceBusEnvironment.SystemConnectivity.Mode = ConnectivityMode.Http;
 
             var manager = NamespaceManager.Create();
-            if (!manager.TopicExists("topic"))
-                manager.CreateTopic("topic");
+			if ( !manager.TopicExists( "topic" ) )
+			{
+				manager.CreateTopic( "topic" );
+			}
 
             var client = TopicClient.Create("topic");
             while (true)
             {
                 var message = CreateNewMessage() ;
                 client.Send(message);
-                Console.WriteLine(".");
+                Console.Write(".");
 
-                Thread.Sleep(500);
+                Thread.Sleep(100);
             }
 
         }
