@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Search]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+	[DisplayName] NVARCHAR(MAX) NOT NULL, 
+	[Collection] NVARCHAR(MAX) NOT NULL, 
+	[ExternalId] NVARCHAR(MAX) NOT NULL
+)

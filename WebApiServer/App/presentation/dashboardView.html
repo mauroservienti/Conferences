@@ -1,0 +1,85 @@
+﻿<section>
+    <div class="row">
+        <div class="search-typeahead" ng-cloak>
+            <typeahead class="typeahead"
+                       items="results"
+                       term="term"
+                       show-search-button="true"
+                       search="executeSearch(term)"
+                       item-selected="selectItem(item, refineSearch)"
+                       placeholder="cueBanner">
+
+                <div class="results" ng-cloak>
+                    <div class="results-group">
+                        <span class="suggestions-header" ng-show="serverSuggestions.length > 0">Suggestions</span>
+
+                        <ul>
+                            <li typeahead-item="s" ng-repeat="s in serverSuggestions" class="suggestions-item">
+                                <a href="javascript:void(0);" class="name">{{s}}</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="results-group">
+                        <span class="results-header" ng-show="serverResults.length > 0">Results ({{totalResults}})</span>
+
+                        <ul>
+                            <li ng-repeat="r in serverResults" typeahead-item="r" class="results-item">
+                                <a href="javascript:void(0);" class="name">
+                                    <item-template template-model="r"
+                                                   item-template-settings="{
+                                                        dataTypeProperty: 'collection',
+                                                        templatesMap: {'People': 'person', 'Companies':'company'},
+                                                        templatesFolder: '^dashboard/'
+                                                   }" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="results-group">
+                        <span class="commands-header" ng-show="clientCommands.length > 0">Actions</span>
+
+                        <ul>
+                            <li typeahead-item="c" ng-repeat="c in clientCommands" class="commands-item">
+                                <a href="javascript:void(0);" class="name">{{c.displayName}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </typeahead>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <h3>Create new person {{fullName()}}</h3>
+            <div class="input-group">
+                <input class="form-control" 
+                       type="text" 
+                       id="firstName" 
+                       data-ng-model="firstName"
+                       placeholder="First name..." />
+            </div>
+
+            <div class="input-group">
+                <input class="form-control" type="text"
+                        id="lastName" 
+                       data-ng-model="lastName" placeholder="Last name..." />
+            </div>
+            <button class="btn btn-primary" data-ng-click="createNewPerson()">Create...</button>
+
+            <h3>Create new company</h3>
+            <div class="input-group">
+                <input class="form-control" type="text" id="companyName" data-ng-model="companyName" placeholder="Company name..." />
+            </div>
+            <button class="btn btn-primary" data-ng-click="createNewCompany()">Create...</button>
+        </div>
+        <div class="col-md-4">
+            <ul data-ng-repeat="command in activeCommands">
+                <li>
+                    <span>{{command.description}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

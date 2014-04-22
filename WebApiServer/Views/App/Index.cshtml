@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html ng-app="my.app" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html ng-app="my.app" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html ng-app="my.app" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html ng-app="my.app" class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render( "~/Content/css" )
+    @Scripts.Render( "~/bundles/modernizr" )
+</head>
+<body>
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <button type="button"
+                    class="navbar-toggle" data-toggle="collapse"
+                    data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">@ViewBag.Title</a>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li data-ng-class="{ active: $state.includes('dashboard') || $state.includes('root') }"><a data-ng-href="#">Home</a></li>
+                <li data-ng-class="{ active: $state.includes('about') }"><a data-ng-href="#/about">About</a></li>
+            </ul>
+
+            <div class="pull-right" data-ui-view="header-view">
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="container">
+        <div data-ui-view>
+        </div>
+    </div>
+
+    @Scripts.Render( "~/bundles/jquery" )
+    @Scripts.Render( "~/bundles/angular" )
+    @Scripts.Render( "~/bundles/bootstrap" )
+    <script src="~/signalr/hubs"></script>
+    @Scripts.Render( "~/bundles/app" )
+</body>
+</html>

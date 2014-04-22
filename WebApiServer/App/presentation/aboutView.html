@@ -1,0 +1,16 @@
+﻿<section>
+    <p>{{name}}</p>
+    <p>Self: {{self}}</p>
+    <p>Next: {{next}}</p>
+    <p>Prev: {{prev}}</p>
+    <ul>
+        <li data-ng-repeat="moment in history">
+            <item-template template-model="moment"
+                           item-template-settings="{
+                                dataTypeProperty: 'momentType',
+                                templatesMap: {0: 'event', 1:'command', 2:'response'},
+                                templatesFolder: '^moments/'
+                            }" />
+        </li>
+    </ul>
+</section>

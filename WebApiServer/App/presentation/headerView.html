@@ -1,0 +1,15 @@
+﻿<section>
+    <ul class="nav nav-pills pull-right">
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <span>{{activeCommands.length}}</span>
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu pull-right" data-ng-repeat="command in activeCommands">
+                <li>
+                    <span>{{command.description}}</span>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</section>
