@@ -5,13 +5,6 @@ VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiServer", "WebApiServer\WebApiServer.csproj", "{7905C87F-3B69-4F0F-8FAA-D613F2BB9ECE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{015A0B4E-830A-4C18-A523-E059D20B2CED}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
-		.nuget\NuGet.targets = .nuget\NuGet.targets
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.Data", "WebApi.Data\WebApi.Data.csproj", "{5485765C-9AD7-4F05-B3DF-7FB80965FA19}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.Commands", "WebApi.Commands\WebApi.Commands.csproj", "{20A7F064-7629-4400-80DB-5FAFD5E7CC4F}"
@@ -67,9 +60,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{839C8E14-8EDA-4807-8BF3-9EB4E7012FCC} = {C0DECC2B-D9B8-4484-B461-25FD5E9ECEB4}
-		{17A648B3-7E35-49E6-9011-41F9574EFF5A} = {C0DECC2B-D9B8-4484-B461-25FD5E9ECEB4}
 		{FE331DFE-80B8-4EF3-8221-4FF16E4C626E} = {260CF7FC-F324-4A30-92DF-6C99AC86F298}
 		{0F6B7361-F7EB-4621-A882-6D3A6BF4E771} = {260CF7FC-F324-4A30-92DF-6C99AC86F298}
+		{839C8E14-8EDA-4807-8BF3-9EB4E7012FCC} = {C0DECC2B-D9B8-4484-B461-25FD5E9ECEB4}
+		{17A648B3-7E35-49E6-9011-41F9574EFF5A} = {C0DECC2B-D9B8-4484-B461-25FD5E9ECEB4}
 	EndGlobalSection
 EndGlobal
