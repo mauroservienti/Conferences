@@ -1,5 +1,5 @@
 # Disclaimer
-This sample, as most samples, is focused on a specific problem, or a set of, in an oversimplified way.
+These samples, as most samples, are focused on a specific problem, or a set of, in an oversimplified way.
 
 All the code in these samples is not intended to be in any way production code and is not intended to be a definitive solution, nor the best neither the correct one, to a problem.
 
