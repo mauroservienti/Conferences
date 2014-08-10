@@ -10,6 +10,7 @@ namespace WebApi.Data
 	{
 		String Id { get; }
 		String AggregateId { get; }
+        Int32 AggregateVersion { get; }
 		DateTimeOffset OccurredAt { get; }
 	}
 }

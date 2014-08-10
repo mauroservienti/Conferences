@@ -51,10 +51,13 @@ namespace WebApi.Data
 			this.uncommittedEvents.Clear();
 		}
 
-		protected void RaiseEvent( IDomainEvent @event )
+		protected void RaiseEvent( DomainEvent @event )
 		{
+            var newVersion = this.Version + 1;
+            @event.AggregateVersion = newVersion;
+
 			this.uncommittedEvents.Add( @event );
-			this.Version++;
+			this.Version = newVersion;
 		}
 
 		public override Int32 GetHashCode()

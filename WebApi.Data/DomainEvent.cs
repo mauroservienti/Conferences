@@ -33,6 +33,12 @@ namespace WebApi.Data
 			set;
 		}
 
+        public Int32 AggregateVersion
+        {
+            get;
+            set;
+        }
+
 		public DateTimeOffset OccurredAt
 		{
 			get;
