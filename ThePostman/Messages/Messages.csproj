@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="DeliverMailMessage.cs" />
     <Compile Include="IMailMessageDelivered.cs" />
+    <Compile Include="IMailMessageDeliveryRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -26,7 +26,7 @@ namespace MailServer.Dublin
 
             this.Bus.Publish( message );
 
-            using ( ConsoleColor.Yellow.AsForegroundColor() )
+            using ( ConsoleColor.DarkYellow.AsForegroundColor() )
             {
                 Console.WriteLine( "Receipt published." );
             }

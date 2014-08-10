@@ -9,11 +9,11 @@ using Topics.Radical;
 
 namespace MailServer.Dublin
 {
-    class DeliverMailMessageHandler : IHandleMessages<DeliverMailMessage>
+    class DeliverMailMessageHandler : IHandleMessages<IMailMessageDeliveryRequest>
     {
         public IBus Bus { get; set; }
 
-        public void Handle( DeliverMailMessage message )
+        public void Handle( IMailMessageDeliveryRequest message )
         {
             var me = this.GetType().Namespace.Split('.').Last();
             var source = this.Bus.GetMessageHeader( message, NServiceBus.Headers.OriginatingEndpoint );
@@ -26,7 +26,7 @@ namespace MailServer.Dublin
 
             this.Bus.Send( message );
 
-            using ( ConsoleColor.Cyan.AsForegroundColor() )
+            using ( ConsoleColor.DarkCyan.AsForegroundColor() )
             {
                 Console.WriteLine( "message forwarded..." );
             }

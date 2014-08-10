@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Messages
 {
-    public class DeliverMailMessage : ICommand
+    public class DeliverMailMessage : IMailMessageDeliveryRequest
     {
         public String MessageId { get; set; }
         public String Subject { get; set; }
