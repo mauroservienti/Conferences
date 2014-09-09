@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MySampleReceiver")]
+[assembly: AssemblyTitle("NSB01SampleMessages")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MySampleReceiver")]
+[assembly: AssemblyProduct("NSB01SampleMessages")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("3988ae3e-cae8-4722-bd69-f1efbf74d984")]
+[assembly: Guid("a9108bd5-7ee3-493b-ba05-4be1ff1f90ee")]
 
 // Version information for an assembly consists of the following four values:
 //
