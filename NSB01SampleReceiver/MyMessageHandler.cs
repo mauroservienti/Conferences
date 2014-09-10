@@ -17,7 +17,7 @@ namespace NSB01SampleReceiver
         {
             using (ConsoleColor.Cyan.AsForegroundColor())
             {
-                Console.WriteLine("Sending MyReply to: ", this.Bus.CurrentMessageContext.ReplyToAddress);
+                Console.WriteLine("Sending MyReply to:  {0}", this.Bus.CurrentMessageContext.ReplyToAddress);
 
                 var reply = new MyReply()
                 {

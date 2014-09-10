@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{25FA86FF-5D47-4804-B909-35641F2430E0}</ProjectGuid>
+    <ProjectGuid>{2583E7BA-F3DC-4AEB-8D7E-575F08B0F230}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NSB01SampleReceiver</RootNamespace>
-    <AssemblyName>NSB01SampleReceiver</AssemblyName>
+    <RootNamespace>NSB02CommandExecutor</RootNamespace>
+    <AssemblyName>NSB02CommandExecutor</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -90,19 +90,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DoSomethingForMeHandler.cs" />
     <Compile Include="EndpointConfig.cs" />
-    <Compile Include="MyMessageHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\NSB01SampleMessages\NSB01SampleMessages.csproj">
-      <Project>{e14a9941-3d59-4a99-a8b0-15ce5c862c87}</Project>
-      <Name>NSB01SampleMessages</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NSB02SampleMessages\NSB02SampleMessages.csproj">
+      <Project>{4E671CD1-7175-4B09-9ACF-41B8BEC5A4A4}</Project>
+      <Name>NSB02SampleMessages</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
