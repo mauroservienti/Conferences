@@ -61,6 +61,9 @@
     <Reference Include="NServiceBus.Host">
       <HintPath>..\packages\NServiceBus.Host.4.6.5\lib\net40\NServiceBus.Host.exe</HintPath>
     </Reference>
+    <Reference Include="Radical">
+      <HintPath>..\packages\Radical.1.4.3.1\lib\net45\Radical.dll</HintPath>
+    </Reference>
     <Reference Include="Raven.Abstractions">
       <HintPath>..\packages\RavenDB.Client.2.5.2916\lib\net45\Raven.Abstractions.dll</HintPath>
     </Reference>
@@ -88,11 +91,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EndpointConfig.cs" />
+    <Compile Include="PoisonMessageHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NSB03SampleMessages\NSB03SampleMessages.csproj">
+      <Project>{54B4F0A2-3E0B-4B60-B108-579325ECC8D6}</Project>
+      <Name>NSB03SampleMessages</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

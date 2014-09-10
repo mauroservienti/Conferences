@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB02CommandExecutor", "NSB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB02EventListener", "NSB02EventListener\NSB02EventListener.csproj", "{A71F4B11-16E6-4C78-9972-1A996755EF38}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Timeouts", "3 - Timeouts", "{A1A5A32F-FD87-46C4-BDD1-7F9BE20253C6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Error Handling", "3 - Error Handling", "{A1A5A32F-FD87-46C4-BDD1-7F9BE20253C6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB03SampleMessages", "NSB03SampleMessages\NSB03SampleMessages.csproj", "{54B4F0A2-3E0B-4B60-B108-579325ECC8D6}"
 EndProject
