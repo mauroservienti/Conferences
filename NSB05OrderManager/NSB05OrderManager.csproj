@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NSB05OrderManager</RootNamespace>
     <AssemblyName>NSB05OrderManager</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -98,6 +99,20 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NSB05Common\NSB05Common.csproj">
+      <Project>{bf60e2b2-b0f3-4905-b0c0-3077222cde94}</Project>
+      <Name>NSB05Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NSB05Customer.Messages\NSB05Customer.Messages.csproj">
+      <Project>{e3870926-f9f8-4eaa-885e-90b8184cbe70}</Project>
+      <Name>NSB05Customer.Messages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NSB05OrderManager.Messages\NSB05OrderManager.Messages.csproj">
+      <Project>{9e1c03ae-dc4c-4769-b918-c644d9fe7c6c}</Project>
+      <Name>NSB05OrderManager.Messages</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -7,7 +7,7 @@ namespace NSB05Customer
 		This class configures this endpoint as a Server. More information about how to configure the NServiceBus host
 		can be found here: http://particular.net/articles/the-nservicebus-host
 	*/
-	public class EndpointConfig : IConfigureThisEndpoint, AsA_Server
+	public class EndpointConfig : IConfigureThisEndpoint, AsA_Publisher
     {
     }
 
@@ -22,7 +22,7 @@ namespace NSB05Customer
 				DataDirectory = @"~\..\RavenDB\Data"
 			}.Initialize();
 
-			Configure.Instance.DefiningMessagesAs( t => t.Namespace != null && t.Namespace == "NSB04SampleMessages" );
+			Configure.Instance.DefiningEventsAs( t => t.Namespace != null && t.Namespace == "NSB05Customer.Messages.Events" );
 			Configure.Instance.RavenPersistenceWithStore( embeddedSore );
 		}
 	}
