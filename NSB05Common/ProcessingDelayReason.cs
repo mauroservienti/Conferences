@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NSB05SampleMessages.Commands
+namespace NSB05Common
 {
-    public class CollectItemsForShipping
+    public enum ProcessingDelayReason
     {
-        public Guid ProcessId { get; set; }
+        SlowItemCollection
     }
 }

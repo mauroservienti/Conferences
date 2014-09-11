@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NSB05SampleMessages.Timeouts
+namespace NSB05OrderManager.Messages.Events
 {
-    public class ItemCollectionTimeout
+    public interface IOrderCreated
     {
-
-        public Guid ProcessId { get; set; }
     }
 }

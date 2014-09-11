@@ -10,4 +10,20 @@ namespace NSB05ShippingService
 	public class EndpointConfig : IConfigureThisEndpoint, AsA_Server
     {
     }
+
+
+
+	public class CustomInitialization : IWantCustomInitialization
+	{
+		public void Init()
+		{
+			var embeddedSore = new Raven.Client.Embedded.EmbeddableDocumentStore
+			{
+				DataDirectory = @"~\..\RavenDB\Data"
+			}.Initialize();
+
+			Configure.Instance.DefiningMessagesAs( t => t.Namespace != null && t.Namespace == "NSB04SampleMessages" );
+			Configure.Instance.RavenPersistenceWithStore( embeddedSore );
+		}
+	}
 }

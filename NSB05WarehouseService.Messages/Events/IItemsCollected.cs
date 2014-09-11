@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NSB05SampleMessages.Events
+namespace NSB05WarehouseService.Messages.Events
 {
-    public interface IShoppingCartCheckedout
+    public interface IItemsCollected
     {
+        String ProcessId { get; set; }
     }
 }

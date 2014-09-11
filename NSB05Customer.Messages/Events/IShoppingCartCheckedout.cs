@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NSB05SampleMessages
+namespace NSB05Customer.Messages.Events
 {
-    public enum ProcessingDelayReason
+    public interface IShoppingCartCheckedout
     {
-        SlowItemCollection
+		String CartId { get; set; }
     }
 }
