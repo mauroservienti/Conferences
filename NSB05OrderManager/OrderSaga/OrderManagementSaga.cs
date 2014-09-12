@@ -17,13 +17,14 @@ namespace NSB05OrderManager.OrderSaga
     public class OrderManagementSaga
         : Saga<OrderManagementSagaData>,
         IAmStartedByMessages<IShoppingCartCheckedout>,
-		//IHandleMessages<IItemsCollected>,
+		IHandleMessages<IItemsCollected>,
         IHandleTimeouts<ItemCollectionTimeout>
     {
-		//public override void ConfigureHowToFindSaga()
-		//{
-		//	this.ConfigureMapping<IItemsCollected>(d => d.ProcessId, m => m.ProcessId);
-		//}
+		public override void ConfigureHowToFindSaga()
+		{
+			this.ConfigureMapping<IItemsCollected>( d => d.ProcessId, m => m.ProcessId );
+			this.ConfigureMapping<ItemCollectionTimeout>( d => d.ProcessId, m => m.ProcessId );
+		}
 
         public void Handle(IShoppingCartCheckedout message)
         {
