@@ -9,6 +9,8 @@ using NSB05Customer.Messages.Events;
 using NSB05OrderManager.Messages.Timeouts;
 using NSB05OrderManager.Messages.Events;
 using NSB05Common;
+using NSB05WarehouseService.Messages.Commands;
+using NSB05WarehouseService.Messages.Events;
 
 namespace NSB05OrderManager.OrderSaga
 {
@@ -28,10 +30,11 @@ namespace NSB05OrderManager.OrderSaga
             this.Data.ProcessId = Guid.NewGuid().ToString();
 			this.Data.CartId = message.CartId;
 
-			//this.Bus.Send(new CollectItems()
-			//{
-			//	ProcessId = this.Data.ProcessId
-			//});
+			this.Bus.Send( new CollectItems()
+			{
+				ProcessId = this.Data.ProcessId,
+				CartId = this.Data.CartId
+			} );
 
             this.RequestTimeout(TimeSpan.FromSeconds(10), new ItemCollectionTimeout()
             {
@@ -39,10 +42,10 @@ namespace NSB05OrderManager.OrderSaga
             });
         }
 
-		//public void Handle(IItemsCollected message)
-		//{
-		//	this.Data.CollectionCompleted = true;
-		//}
+		public void Handle( IItemsCollected message )
+		{
+			this.Data.CollectionCompleted = true;
+		}
 
         public void Timeout(ItemCollectionTimeout state)
         {
