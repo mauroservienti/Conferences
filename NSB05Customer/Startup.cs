@@ -15,6 +15,11 @@ namespace NSB05Customer
 
         public void Start()
         {
+			using ( ConsoleColor.Red.AsForegroundColor() )
+			{
+				Console.WriteLine("Isn't this an amazing web site? :-D");
+			}
+
             using (ConsoleColor.Cyan.AsForegroundColor()) 
             {
 				Console.WriteLine( "Publishing IShoppingCartCheckedout..." );

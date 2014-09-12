@@ -11,8 +11,6 @@ namespace NSB05Customer
     {
     }
 
-
-
 	public class CustomInitialization : IWantCustomInitialization
 	{
 		public void Init()
@@ -22,7 +20,8 @@ namespace NSB05Customer
 				DataDirectory = @"~\..\RavenDB\Data"
 			}.Initialize();
 
-			Configure.Instance.DefiningEventsAs( t => t.Namespace != null && t.Namespace == "NSB05Customer.Messages.Events" );
+			Configure.Instance.DefiningCommandsAs( t => t.Namespace != null && t.Namespace.EndsWith( ".Commands" ) );
+			Configure.Instance.DefiningEventsAs( t => t.Namespace != null && t.Namespace.EndsWith( ".Events" ) );
 			Configure.Instance.RavenPersistenceWithStore( embeddedSore );
 		}
 	}
