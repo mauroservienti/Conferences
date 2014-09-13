@@ -26,9 +26,14 @@ namespace NSB05OrderManager.OrderSaga
 	{
 		public override void ConfigureHowToFindSaga()
 		{
-			this.ConfigureMapping<IItemsCollected>( d => d.OrderId, m => m.OrderId );
-			this.ConfigureMapping<ItemCollectionTimeout>( d => d.OrderId, m => m.OrderId );
-			this.ConfigureMapping<IOrderShipped>( d => d.OrderId, m => m.OrderId );
+			this.ConfigureMapping<IItemsCollected>( m => m.OrderId )
+				.ToSaga( d => d.OrderId );
+
+			this.ConfigureMapping<ItemCollectionTimeout>( m => m.OrderId )
+				.ToSaga( d => d.OrderId );
+
+			this.ConfigureMapping<IOrderShipped>( m => m.OrderId )
+				.ToSaga( d => d.OrderId );
 		}
 
 		public void Handle( IShoppingCartCheckedout message )
