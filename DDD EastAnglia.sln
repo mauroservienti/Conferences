@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - RequestReply", "1 - RequestReply", "{EB69E1C8-4010-4C3D-8BD4-56FEF523C293}"
+	ProjectSection(SolutionItems) = preProject
+		1 - RequestReply Readme.md = 1 - RequestReply Readme.md
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB01SampleSender", "NSB01SampleSender\NSB01SampleSender.csproj", "{75D07501-E577-4660-9CD7-C997A602047D}"
 EndProject
@@ -12,6 +15,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB01SampleMessages", "NSB01SampleMessages\NSB01SampleMessages.csproj", "{E14A9941-3D59-4A99-A8B0-15CE5C862C87}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Events", "2 - Events", "{F874C814-3B6D-4FA8-AA29-A982307A8FEB}"
+	ProjectSection(SolutionItems) = preProject
+		2 - Events Readme.md = 2 - Events Readme.md
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB02SampleMessages", "NSB02SampleMessages\NSB02SampleMessages.csproj", "{4E671CD1-7175-4B09-9ACF-41B8BEC5A4A4}"
 EndProject
@@ -22,6 +28,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB02EventListener", "NSB02EventListener\NSB02EventListener.csproj", "{A71F4B11-16E6-4C78-9972-1A996755EF38}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Error Handling", "3 - Error Handling", "{A1A5A32F-FD87-46C4-BDD1-7F9BE20253C6}"
+	ProjectSection(SolutionItems) = preProject
+		3 - Error Handling.md = 3 - Error Handling.md
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB03SampleMessages", "NSB03SampleMessages\NSB03SampleMessages.csproj", "{54B4F0A2-3E0B-4B60-B108-579325ECC8D6}"
 EndProject
@@ -30,6 +39,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB03SampleReceiver", "NSB03SampleReceiver\NSB03SampleReceiver.csproj", "{B79E5C5C-226F-420A-9B87-05825431B945}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Scale-out", "4 - Scale-out", "{F6BCEC87-BDE3-46A5-ACBC-CA78F7346B0C}"
+	ProjectSection(SolutionItems) = preProject
+		4 - Scale-out.md = 4 - Scale-out.md
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB04SampleMessages", "NSB04SampleMessages\NSB04SampleMessages.csproj", "{6F6F7AF6-9686-4F33-A159-C3397341D768}"
 EndProject
@@ -38,6 +50,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB04SampleReceiver", "NSB04SampleReceiver\NSB04SampleReceiver.csproj", "{82022AEC-43FA-49C7-96CF-30672F9F4F72}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Sagas", "5 - Sagas", "{32B49DD0-3E1C-4F08-B7BD-18994F3D71C5}"
+	ProjectSection(SolutionItems) = preProject
+		5 - Sagas.md = 5 - Sagas.md
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB05OrderManager", "NSB05OrderManager\NSB05OrderManager.csproj", "{27296AC9-778F-4B5E-8A48-2A6D3485F87F}"
 EndProject
