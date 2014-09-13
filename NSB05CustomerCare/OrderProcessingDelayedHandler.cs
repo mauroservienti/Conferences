@@ -12,7 +12,7 @@ namespace NSB05CustomerCare
 	{
 		public void Handle( IOrderProcessingDelayed message )
 		{
-			using ( ConsoleColor.Red.AsForegroundColor() ) 
+			using ( ConsoleColor.DarkYellow.AsForegroundColor() ) 
 			{
 				Console.WriteLine("We should send a gift to the customer...the order has been dalyed.");
 			}

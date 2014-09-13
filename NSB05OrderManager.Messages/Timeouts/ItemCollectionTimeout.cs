@@ -8,6 +8,6 @@ namespace NSB05OrderManager.Messages.Timeouts
 {
     public class ItemCollectionTimeout
     {
-        public String ProcessId { get; set; }
+        public String OrderId { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace NSB05OrderManager.OrderSaga
     public class OrderManagementSagaData : ContainSagaData
     {
         [Unique]
-        public String ProcessId { get; set; }
+        public String OrderId { get; set; }
 
 		public String CartId { get; set; }
 

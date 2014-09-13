@@ -18,10 +18,11 @@ namespace NSB05WarehouseService
 			{
 				Console.WriteLine( "Collect items request for cart: {0}", message.CartId );
 
-				this.Bus().Publish<IItemsCollected>( e =>
-				{
-					e.ProcessId = message.ProcessId;
-				} );
+				this.Bus()
+					.Publish<IItemsCollected>( e =>
+					{
+						e.OrderId = message.OrderId;
+					} );
 
 				Console.WriteLine( "Items collected." );
 			}

@@ -8,6 +8,6 @@ namespace NSB05WarehouseService.Messages.Events
 {
     public interface IItemsCollected
     {
-        String ProcessId { get; set; }
+        String OrderId { get; set; }
     }
 }

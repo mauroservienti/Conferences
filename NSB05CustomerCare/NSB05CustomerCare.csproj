@@ -93,6 +93,7 @@
   <ItemGroup>
     <Compile Include="EndpointConfig.cs" />
     <Compile Include="OrderProcessingDelayedHandler.cs" />
+    <Compile Include="OrderShippedHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -103,6 +104,10 @@
     <ProjectReference Include="..\NSB05OrderManager.Messages\NSB05OrderManager.Messages.csproj">
       <Project>{9e1c03ae-dc4c-4769-b918-c644d9fe7c6c}</Project>
       <Name>NSB05OrderManager.Messages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NSB05ShippingService.Messages\NSB05ShippingService.Messages.csproj">
+      <Project>{fb3d80b6-761e-4bfd-b6c8-a07b959eae20}</Project>
+      <Name>NSB05ShippingService.Messages</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

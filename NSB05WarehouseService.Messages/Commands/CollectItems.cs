@@ -8,7 +8,7 @@ namespace NSB05WarehouseService.Messages.Commands
 {
     public class CollectItems
     {
-        public String ProcessId { get; set; }
+        public String OrderId { get; set; }
 		public String CartId { get; set; }
     }
 }

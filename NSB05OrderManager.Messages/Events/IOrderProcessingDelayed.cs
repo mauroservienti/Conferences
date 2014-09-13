@@ -10,7 +10,7 @@ namespace NSB05OrderManager.Messages.Events
     public interface IOrderProcessingDelayed
     {
 
-        String ProcessId { get; set; }
+        String OrderId { get; set; }
 
         ProcessingDelayReason Reason { get; set; }
     }

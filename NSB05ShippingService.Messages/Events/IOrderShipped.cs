@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NSB05OrderManager.Messages.Events
+namespace NSB05ShippingService.Messages.Events
 {
-    public interface IOrderCreated
-    {
-		string OrderId { get; set; }
+	public interface IOrderShipped
+	{
+		String OrderId { get; set; }
 	}
 }
