@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - RequestReply", "1 - RequestReply", "{EB69E1C8-4010-4C3D-8BD4-56FEF523C293}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - RequestReply", "01 - RequestReply", "{EB69E1C8-4010-4C3D-8BD4-56FEF523C293}"
 	ProjectSection(SolutionItems) = preProject
 		1 - RequestReply Readme.md = 1 - RequestReply Readme.md
 	EndProjectSection
@@ -14,7 +14,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB01SampleReceiver", "NSB0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB01SampleMessages", "NSB01SampleMessages\NSB01SampleMessages.csproj", "{E14A9941-3D59-4A99-A8B0-15CE5C862C87}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Events", "2 - Events", "{F874C814-3B6D-4FA8-AA29-A982307A8FEB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Events", "02 - Events", "{F874C814-3B6D-4FA8-AA29-A982307A8FEB}"
 	ProjectSection(SolutionItems) = preProject
 		2 - Events Readme.md = 2 - Events Readme.md
 	EndProjectSection
@@ -27,7 +27,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB02CommandExecutor", "NSB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB02EventListener", "NSB02EventListener\NSB02EventListener.csproj", "{A71F4B11-16E6-4C78-9972-1A996755EF38}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Error Handling", "3 - Error Handling", "{A1A5A32F-FD87-46C4-BDD1-7F9BE20253C6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Error Handling", "03 - Error Handling", "{A1A5A32F-FD87-46C4-BDD1-7F9BE20253C6}"
 	ProjectSection(SolutionItems) = preProject
 		3 - Error Handling.md = 3 - Error Handling.md
 	EndProjectSection
@@ -38,7 +38,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB03SampleSender", "NSB03S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB03SampleReceiver", "NSB03SampleReceiver\NSB03SampleReceiver.csproj", "{B79E5C5C-226F-420A-9B87-05825431B945}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Scale-out", "4 - Scale-out", "{F6BCEC87-BDE3-46A5-ACBC-CA78F7346B0C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Scale-out", "04 - Scale-out", "{F6BCEC87-BDE3-46A5-ACBC-CA78F7346B0C}"
 	ProjectSection(SolutionItems) = preProject
 		4 - Scale-out.md = 4 - Scale-out.md
 	EndProjectSection
@@ -49,7 +49,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB04SampleSender", "NSB04S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB04SampleReceiver", "NSB04SampleReceiver\NSB04SampleReceiver.csproj", "{82022AEC-43FA-49C7-96CF-30672F9F4F72}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Sagas", "5 - Sagas", "{32B49DD0-3E1C-4F08-B7BD-18994F3D71C5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 - Sagas", "05 - Sagas", "{32B49DD0-3E1C-4F08-B7BD-18994F3D71C5}"
 	ProjectSection(SolutionItems) = preProject
 		5 - Sagas.md = 5 - Sagas.md
 	EndProjectSection
@@ -76,7 +76,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB05Common", "NSB05Common\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB05Customer.Messages", "NSB05Customer.Messages\NSB05Customer.Messages.csproj", "{E3870926-F9F8-4EAA-885E-90B8184CBE70}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6 - v4 - Hosting", "6 - v4 - Hosting", "{3FD0D3B0-57D9-4C23-8C4A-6CC878C395A5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06 - v4 - Hosting", "06 - v4 - Hosting", "{3FD0D3B0-57D9-4C23-8C4A-6CC878C395A5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "___7 - Hosting v5", "___7 - Hosting v5", "{F28E1741-BA2C-491B-96B3-BBA8F56C4030}"
 EndProject
@@ -88,9 +88,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB07SelfHost", "NSB07SelfH
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB07BuiltinHost", "NSB07BuiltinHost\NSB07BuiltinHost.csproj", "{72C615C5-4FC9-4629-96D9-142EBEDB6C84}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7 - v4 - Configuration Customization", "7 - v4 - Configuration Customization", "{3EFC481E-F796-4EFE-98A8-64C5C98502DC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "07 - v4 - Configuration Customization", "07 - v4 - Configuration Customization", "{3EFC481E-F796-4EFE-98A8-64C5C98502DC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB07CustomConfig", "NSB07CustomConfig\NSB07CustomConfig.csproj", "{76AED22E-5C08-4867-9F08-304A26EA2E03}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "08 - v4 - Message Mutator", "08 - v4 - Message Mutator", "{497A4694-2854-41CD-BEBD-7FE7B0DBCA54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB08MutatorExtensibility", "NSB08MutatorExtensibility\NSB08MutatorExtensibility.csproj", "{9668F017-4086-49D0-BCB4-447089322271}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSB08UnitOfWork", "NSB08UnitOfWork\NSB08UnitOfWork.csproj", "{3955E199-3596-435B-89F5-026B5D7F86FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -210,6 +216,14 @@ Global
 		{76AED22E-5C08-4867-9F08-304A26EA2E03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76AED22E-5C08-4867-9F08-304A26EA2E03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76AED22E-5C08-4867-9F08-304A26EA2E03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9668F017-4086-49D0-BCB4-447089322271}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9668F017-4086-49D0-BCB4-447089322271}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9668F017-4086-49D0-BCB4-447089322271}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9668F017-4086-49D0-BCB4-447089322271}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3955E199-3596-435B-89F5-026B5D7F86FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3955E199-3596-435B-89F5-026B5D7F86FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3955E199-3596-435B-89F5-026B5D7F86FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3955E199-3596-435B-89F5-026B5D7F86FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -244,5 +258,7 @@ Global
 		{428686FA-902D-4266-B450-9A202D0C002E} = {F28E1741-BA2C-491B-96B3-BBA8F56C4030}
 		{72C615C5-4FC9-4629-96D9-142EBEDB6C84} = {F28E1741-BA2C-491B-96B3-BBA8F56C4030}
 		{76AED22E-5C08-4867-9F08-304A26EA2E03} = {3EFC481E-F796-4EFE-98A8-64C5C98502DC}
+		{9668F017-4086-49D0-BCB4-447089322271} = {497A4694-2854-41CD-BEBD-7FE7B0DBCA54}
+		{3955E199-3596-435B-89F5-026B5D7F86FA} = {497A4694-2854-41CD-BEBD-7FE7B0DBCA54}
 	EndGlobalSection
 EndGlobal

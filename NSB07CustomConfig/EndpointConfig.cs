@@ -13,6 +13,7 @@ namespace NSB07CustomConfig
         {
             //IWantCustomInitialization this should be implemented on the EndpointConfig class.
             //No DI here
+            //Need to call Configure.With()
         }
     }
 
@@ -22,6 +23,7 @@ namespace NSB07CustomConfig
         {
             //INeedInitialization cannot be implemented on the EndpointConfig class
             //Called after Configure.With() is completed and a container has been set.
+            Configure.Instance.UseInMemoryTimeoutPersister();
         }
     }
 
