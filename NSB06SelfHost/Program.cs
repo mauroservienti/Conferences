@@ -16,7 +16,6 @@ namespace NSB06SelfHost
                 DataDirectory = @"~\..\RavenDB\Data"
             }.Initialize();
 
-
             NServiceBus.Configure.With()
                 .DefaultBuilder()
                 .Log4Net()

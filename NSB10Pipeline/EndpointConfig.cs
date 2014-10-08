@@ -19,6 +19,16 @@ namespace NSB10Pipeline
         }
     }
 
+    class MyOtherBehaviorSetup : RegisterStep
+    {
+        public MyOtherBehaviorSetup()
+            : base( "MyOtherBehavior", typeof( MyOtherBehavior ), "description here..." )
+        {
+            InsertAfter( WellKnownStep.DeserializeMessages );
+        }
+    }
+
+
 	class MyBehavior : IBehavior<IncomingContext>
 	{
 		public void Invoke( IncomingContext context, System.Action next )
@@ -38,15 +48,7 @@ namespace NSB10Pipeline
 		}
 	}
 
-	class MyOtherBehaviorSetup : RegisterStep 
-	{
-		public MyOtherBehaviorSetup()
-			: base( "MyOtherBehavior" , typeof(MyOtherBehavior), "description here..." )
-		{
-			InsertAfter( WellKnownStep.DeserializeMessages );
-		}
-	}
-
+	
 	class MyOtherBehavior : IBehavior<IncomingContext>
 	{
 		public void Invoke( IncomingContext context, System.Action next )
