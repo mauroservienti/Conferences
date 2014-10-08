@@ -7,8 +7,8 @@
     <ProjectGuid>{428686FA-902D-4266-B450-9A202D0C002E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NSB07SelfHost</RootNamespace>
-    <AssemblyName>NSB07SelfHost</AssemblyName>
+    <RootNamespace>NSB09SelfHost</RootNamespace>
+    <AssemblyName>NSB09SelfHost</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

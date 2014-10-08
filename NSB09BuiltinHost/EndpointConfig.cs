@@ -1,5 +1,5 @@
 
-namespace NSB07BuiltinHost
+namespace NSB09BuiltinHost
 {
     using NServiceBus;
 

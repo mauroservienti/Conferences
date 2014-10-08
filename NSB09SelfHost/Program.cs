@@ -6,13 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NSB07SelfHost
+namespace NSB09SelfHost
 {
     class Program
     {
         static void Main( string[] args )
         {
             var cfg = new BusConfiguration();
+
             cfg.UsePersistence<InMemoryPersistence>();
             cfg.Conventions()
                 .DefiningCommandsAs( t => t.Namespace != null && t.Namespace.EndsWith( ".Commands" ) )
