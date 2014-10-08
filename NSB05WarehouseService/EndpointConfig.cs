@@ -11,7 +11,7 @@ namespace NSB05WarehouseService
     {
     }
 
-	public class CustomInitialization : IWantCustomInitialization
+	public class CustomInitialization : INeedInitialization
 	{
 		public void Init()
 		{

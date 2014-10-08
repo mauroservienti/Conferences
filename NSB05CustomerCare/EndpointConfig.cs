@@ -11,7 +11,7 @@ namespace NSB05CustomerCare
     {
     }
 
-	public class CustomInitialization : IWantCustomInitialization
+	public class CustomInitialization : INeedInitialization
 	{
 		public void Init()
 		{

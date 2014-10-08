@@ -12,7 +12,7 @@ namespace NSB06BuiltinHost
 
     }
 
-    public class CustomInitialization : IWantCustomInitialization
+    class CustomInitialization : INeedInitialization
     {
         public void Init()
         {
