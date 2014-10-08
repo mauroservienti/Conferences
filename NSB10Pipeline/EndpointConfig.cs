@@ -25,6 +25,13 @@ namespace NSB10Pipeline
 		{
 			//can do something before moving on
 
+			//context.IncomingLogicalMessage;
+			//context.LogicalMessages;
+			//context.MessageHandler;
+			//context.PhysicalMessage;
+			//context.Builder;
+			//context.DoNotInvokeAnyMoreHandlers();
+
 			next();
 
 			//can do something after the message has been handled
