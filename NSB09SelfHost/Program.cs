@@ -19,9 +19,10 @@ namespace NSB09SelfHost
                 .DefiningCommandsAs( t => t.Namespace != null && t.Namespace.EndsWith( ".Commands" ) )
                 .DefiningEventsAs( t => t.Namespace != null && t.Namespace.EndsWith( ".Events" ) );
 
-            var bus = Bus.Create( cfg ).Start();
-
-            Console.Read();
+            using ( var bus = Bus.Create( cfg ).Start() )
+            {
+                Console.Read();
+            }
         }
     }
 }

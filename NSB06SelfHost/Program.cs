@@ -16,7 +16,7 @@ namespace NSB06SelfHost
                 DataDirectory = @"~\..\RavenDB\Data"
             }.Initialize();
 
-            NServiceBus.Configure.With()
+            var startableBus = NServiceBus.Configure.With()
                 .DefaultBuilder()
                 .Log4Net()
                 .DefiningCommandsAs( t => t.Namespace != null && t.Namespace.EndsWith( ".Commands" ) )
@@ -24,10 +24,13 @@ namespace NSB06SelfHost
                 .RavenPersistenceWithStore( embeddedSore )
                 .UnicastBus()
                 .LoadMessageHandlers()
-                .CreateBus()
-                .Start();
+                .CreateBus();
+
+            var bus = startableBus.Start();
 
             Console.Read();
+
+            startableBus.Dispose();
         }
     }
 }
