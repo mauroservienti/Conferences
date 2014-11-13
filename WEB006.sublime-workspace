@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"sam",
+				"sampleServiceProvider"
+			],
+			[
+				"sample",
+				"sampleService"
+			],
+			[
+				"se",
+				"setting"
+			],
+			[
+				"a",
+				"aSetting"
+			],
+			[
+				"s",
+				"services"
+			],
+			[
+				"_s",
+				"_sampleValue_original"
+			],
+			[
+				"product",
+				"products"
+			],
+			[
+				"from",
+				"fromState"
+			],
+			[
+				"to",
+				"toLowerCase"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"pro",
+				"products"
+			],
+			[
 				"sta",
 				"stateParams"
 			],
@@ -70,10 +114,6 @@
 			[
 				"htm",
 				"html5Mode"
-			],
-			[
-				"se",
-				"settings"
 			],
 			[
 				"ste",
@@ -160,12 +200,29 @@
 	},
 	"file_history":
 	[
-		"/Users/mauro/Repositories/mauroservienti/Conferences/Directives/presentation/productsView.html",
-		"/Users/mauro/Repositories/mauroservienti/Conferences/Directives/scripts/breadcrumbs/radical.breadcrumbs.js",
-		"/Users/mauro/Repositories/mauroservienti/Conferences/Directives/index.html",
+		"/Users/mauro/Repositories/mauroservienti/Conferences/Providers/sampleService.js",
+		"/Users/mauro/Repositories/mauroservienti/Conferences/Providers/presentation/dashboardController.js",
+		"/Users/mauro/Repositories/mauroservienti/Conferences/Providers/presentation/dashboardView.html",
+		"/Users/mauro/Repositories/mauroservienti/Conferences/Providers/index.html",
+		"/Users/mauro/Repositories/mauroservienti/Conferences/Providers/appModule.js",
+		"/Users/mauro/Repositories/mauroservienti/Conferences/ControllerAs/presentation/dashboardController.js",
+		"/Users/mauro/Repositories/mauroservienti/Conferences/ControllerAs/presentation/dashboardView.html",
 		"/Users/mauro/Repositories/mauroservienti/Conferences/ControllerAs/index.html",
-		"/Users/mauro/Repositories/RadicalFx/radical-directives/breadcrumbs/samples/index.html",
 		"/Users/mauro/Repositories/mauroservienti/Conferences/ControllerAs/appModule.js",
+		"/Users/mauro/Repositories/mauroservienti/Conferences/ControllerAs/presentation/aboutController.js",
+		"/Users/mauro/Repositories/mauroservienti/Conferences/Directives/templates/itemTemplate/templates/b.html",
+		"/Users/mauro/Repositories/mauroservienti/Conferences/Directives/templates/itemTemplate/templates/a.html",
+		"/Users/mauro/Repositories/mauroservienti/Conferences/Directives/appModule.js",
+		"/Users/mauro/Repositories/mauroservienti/Conferences/Directives/presentation/productsView.html",
+		"/Users/mauro/Repositories/mauroservienti/Conferences/Directives/_server.js",
+		"/Users/mauro/Repositories/mauroservienti/Conferences/Directives/templates/itemTemplate/templates/empty-selection.html",
+		"/Users/mauro/Repositories/mauroservienti/Conferences/Directives/index.html",
+		"/Users/mauro/Repositories/mauroservienti/Conferences/Directives/presentation/productsController.js",
+		"/Users/mauro/Repositories/mauroservienti/Conferences/Directives/presentation/productView.html",
+		"/Users/mauro/Repositories/RadicalFx/radical-directives/typeahead/samples/app/application.js",
+		"/Users/mauro/Repositories/RadicalFx/radical-directives/typeahead/samples/index.html",
+		"/Users/mauro/Repositories/mauroservienti/Conferences/Directives/scripts/breadcrumbs/radical.breadcrumbs.js",
+		"/Users/mauro/Repositories/RadicalFx/radical-directives/breadcrumbs/samples/index.html",
 		"/Users/mauro/Repositories/mauroservienti/Conferences/ControllerAs/dashboardView.html",
 		"/Applications/Sublime Text.app/Contents/MacOS/changelog.txt",
 		"/Users/mauro/Repositories/RadicalFx/radical-directives/itemTemplate/src/radical.itemTemplate.js",

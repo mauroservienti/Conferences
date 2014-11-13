@@ -33,9 +33,6 @@
                     <li data-ng-class="{ active: $state.includes('dashboard') || $state.includes('root') }">
                         <a data-ng-href="/#/">Dashboard</a>
                     </li>
-                    <li data-ng-class="{ active: $state.includes('about') }">
-                        <a data-ng-href="/#/about">About</a>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -58,7 +55,7 @@
     <script src="/bower_components/angular-busy/dist/angular-busy.js"></script>
 
     <script src="appModule.js"></script>
+    <script src="sampleService.js"></script>
     <script src="/presentation/dashboardController.js"></script>
-    <script src="/presentation/aboutController.js"></script>
 </body>
 </html>

@@ -2,6 +2,7 @@
     'use strict';
 
     angular.module('sample.controllers', []);
+    angular.module('sample.services', []);
 
     var sampleApp = angular.module('sample.App', [
                 'ngRoute',
@@ -9,13 +10,15 @@
                 'ui.router',
                 'ui.bootstrap',
                 'cgBusy',
-                'sample.controllers'
+                'sample.controllers',
+                'sample.services'
     ]);
 
-    sampleApp.config(['$stateProvider', '$locationProvider', '$logProvider',
-            function ( $stateProvider, $locationProvider, $logProvider) {
+    sampleApp.config(['$stateProvider', '$locationProvider', '$logProvider', 'sampleServiceProvider',
+            function ( $stateProvider, $locationProvider, $logProvider, sampleServiceProvider) {
 
                 $logProvider.debugEnabled(true);
+                sampleServiceProvider.aSetting = 'this is my setting';
                 
                 var rootViews = {
                     '': {
@@ -32,15 +35,6 @@
                     .state('dashboard', {
                         url: '/',
                         views: rootViews
-                    })
-                    .state('about', {
-                        url: '/about',
-                        views: {
-                            '': {
-                                templateUrl: '/presentation/aboutView.html',
-                                controller: 'aboutController as about'
-                            }
-                        }
                     });
 
                 $locationProvider.html5Mode(false);
