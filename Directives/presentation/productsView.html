@@ -17,5 +17,12 @@
               </div>
           </div>
       </radical-typeahead>
-      <div>Current selection: {{products.selected}}</div>
+      <div>
+      <hr/>
+      <div>
+          <item-template template-model="products.selected" 
+                 item-template-settings="{ 
+                    handleUndefinedModel: true, 
+                    undefinedTemplateName: 'empty-selection' }" />
+      </div>
       </section>

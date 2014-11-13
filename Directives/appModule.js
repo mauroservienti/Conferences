@@ -24,7 +24,7 @@
                 var original = breadcrumbsConfigProvider.defaultItemNameResolver;
                 breadcrumbsConfigProvider.defaultItemNameResolver = function(state, stateParams, isCurrent) {
                     
-                    if(state.name === 'products.byId'){
+                    if(state.name === 'products.id'){
                         return '"' + stateParams.id + '" ' + state.data.settings.displayName;   
                     }
 
@@ -87,10 +87,10 @@
                             }
                         }
                     })
-                    .state('products.byId', {
+                    .state('products.id', {
                         url: '/{id}',
                         views: {
-                            '': {
+                            '@': {
                                 templateUrl: '/presentation/productView.html',
                                 controller: 'productController as product'
                             }
@@ -105,9 +105,10 @@
                 console.debug('configuration completed.');
             }]);
 
-    sampleApp.run(['$log', '$state', '$rootScope', '$stateParams','typeaheadConfig',
-        function ( $log, $state, $rootScope, $stateParams, typeaheadConfig) {
+    sampleApp.run(['$log', '$state', '$rootScope', '$stateParams','itemTemplateConfig','typeaheadConfig',
+        function ( $log, $state, $rootScope, $stateParams, itemTemplateConfig, typeaheadConfig) {
 
+            itemTemplateConfig.defaultSettings.templatesFolder = '/templates/itemTemplate/templates/';
             typeaheadConfig.templateUrl = '/templates/typeahead/template.html';
 
             $rootScope.$state = $state;

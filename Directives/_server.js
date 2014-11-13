@@ -10,11 +10,9 @@ http.createServer(function(request, response) {
 
   if(uri[uri.length-1]==="/"){
     uri = uri.substring(0,uri.length-1);
-    console.log("Uri: " + uri);
   }
 
   var filename = path.join(process.cwd(), uri);
-  console.log("filename: " + filename);
 
   path.exists(filename, function(exists) {
     if(!exists) {
