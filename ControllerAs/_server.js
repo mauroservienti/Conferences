@@ -6,9 +6,16 @@ var http = require("http"),
 
 http.createServer(function(request, response) {
 
-  var uri = url.parse(request.url).pathname
-    , filename = path.join(process.cwd(), uri);
-  
+  var uri = url.parse(request.url).pathname;
+
+  if(uri[uri.length-1]==="/"){
+    uri = uri.substring(0,uri.length-1);
+    console.log("Uri: " + uri);
+  }
+
+  var filename = path.join(process.cwd(), uri);
+  console.log("filename: " + filename);
+
   path.exists(filename, function(exists) {
     if(!exists) {
       response.writeHead(404, {"Content-Type": "text/plain"});
