@@ -32,15 +32,6 @@
                     .state('dashboard', {
                         url: '/',
                         views: rootViews
-                    })
-                    .state('about', {
-                        url: '/about',
-                        views: {
-                            '': {
-                                templateUrl: '/presentation/aboutView.html',
-                                controller: 'aboutController as about'
-                            }
-                        }
                     });
 
                 $locationProvider.html5Mode(false);
