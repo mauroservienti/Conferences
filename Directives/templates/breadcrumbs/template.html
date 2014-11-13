@@ -1,0 +1,9 @@
+﻿<ol class="breadcrumb">
+    <li ng-repeat="state in $navigationState.currentState.path" ng-class="{ active: $navigationState.isCurrent(state) }">
+        <!-- ui-sref="{{ state.name }}" -->
+        <a ng-if="!$navigationState.isCurrent(state)" href="{{$navigationState.formatUrl(state)}}">{{$navigationState.getDisplayName(state)}}</a>
+        <span ng-if="$navigationState.isCurrent(state)">
+            {{$navigationState.getDisplayName(state)}}
+        </span>
+    </li>
+</ol>

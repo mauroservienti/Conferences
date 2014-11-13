@@ -1,0 +1,23 @@
+﻿<div class="typeahead" ng-class="{ busy: isBusy, focused: focused }">
+    <div class="typeahead-container" ng-class="{ 'with-button': showSearchButton }">
+        <span class="tag"
+              ng-class="tagClass({tag: tag})"
+              ng-repeat="tag in tags">
+            {{tagDisplayValue({tag: tag})}}
+            <span ng-click="removeTag(tag)" 
+                  class="remove glyphicon glyphicon-remove"></span>
+        </span>
+        <input ng-model="term"
+               class="typeahead-input-box"
+               ng-class="{ busy: isBusy }"
+               ng-change="query()"
+               autocomplete="off"
+               placeholder="{{placeholder}}">
+        <div ng-transclude class="typeahead-list-container"></div>
+    </div>
+    <span class="glyphicon glyphicon-search search-button" 
+          ng-class="{ busy: isBusy }" 
+          ng-show="showSearchButton" 
+          ng-click="explicitQuery()"></span>
+    <span class="busy-indicator" ng-class="{ busy: isBusy }"></span>
+</div>
