@@ -9,9 +9,10 @@
         		this.setting = setting;
         	}
 
-	    	this.$get = function sampleServiceFactory() {
+	    	this.$get = ['$log', function sampleServiceFactory($log) {
+	    		$log.debug('sampleServiceFactory invoked');
 	    		return new SampleService( this.aSetting );
-	    	};
+	    	}];
     }]);
 
 }())
