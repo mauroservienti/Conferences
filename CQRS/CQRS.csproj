@@ -86,6 +86,12 @@
     <Reference Include="Radical.Bootstrapper.Windsor.AspNet">
       <HintPath>..\packages\Radical.Bootstrapper.Windsor.AspNet.0.0.1.5-Beta\lib\net45\Radical.Bootstrapper.Windsor.AspNet.dll</HintPath>
     </Reference>
+    <Reference Include="Raven.Abstractions">
+      <HintPath>..\packages\RavenDB.Client.3.0.3507-Unstable\lib\net45\Raven.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Raven.Client.Lightweight">
+      <HintPath>..\packages\RavenDB.Client.3.0.3507-Unstable\lib\net45\Raven.Client.Lightweight.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data" />
@@ -166,13 +172,13 @@
   <ItemGroup>
     <Compile Include="App_Start\JasonConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Commands\CreateNewPerson.cs" />
-    <Compile Include="Commands\Handlers\CreateNewPersonHandler.cs" />
-    <Compile Include="Controllers\SampleController.cs" />
+    <Compile Include="Controllers\PeopleController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\WindsorJasonContainerProxy.cs" />
+    <Compile Include="Installers\DefaultInstaller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -191,6 +197,20 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CQRS.Commands\CQRS.Commands.csproj">
+      <Project>{186177d7-b5d5-4892-8778-ce5dab49bf7d}</Project>
+      <Name>CQRS.Commands</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CQRS.Domain\CQRS.Domain.csproj">
+      <Project>{2fb03d5e-279f-48eb-b7c2-38e6b3940e94}</Project>
+      <Name>CQRS.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CQRS.Views\CQRS.Views.csproj">
+      <Project>{09db595d-480e-44b2-97b1-cb5ea424f867}</Project>
+      <Name>CQRS.Views</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

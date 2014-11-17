@@ -21,11 +21,9 @@ namespace CQRS
             (
 				pathToScanForAssemblies: pathToScanForAssemblies,
                 assemblySelectPattern: assemblySelectPattern
-            )
-            {
-                Container = new WindsorJasonContainerProxy( container )
-            };
+            );
 
+			jasonConfig.Container = new WindsorJasonContainerProxy( container );
 			jasonConfig.AddEndpoint( new Jason.WebAPI.JasonWebAPIEndpoint() 
 			{
 				IsCommandConvention = t =>

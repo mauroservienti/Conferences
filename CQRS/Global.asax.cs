@@ -19,10 +19,11 @@ namespace CQRS
 			var bootstrapper = new WindsorBootstrapper( path, "Shopper*" );
 			var container = bootstrapper.Boot();
 
-			GlobalConfiguration.Configure( WebApiConfig.Register );
+			GlobalConfiguration.Configure( cfg =>
+			{
+				WebApiConfig.Register( cfg, container );
+			} );
 			JasonConfig.Initialize( path, "CQ*", container );
-
-			GlobalConfiguration.Configuration.DependencyResolver = new WindsorDependencyResolver( container );
 		}
 	}
 }
