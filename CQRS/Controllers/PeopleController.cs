@@ -16,73 +16,44 @@ namespace CQRS.Controllers
 	{
 		IDocumentSession session;
 
-		public PeopleController(IDocumentSession session)
+		public PeopleController( IDocumentSession session )
 		{
 			this.session = session;
 		}
 
 		[HttpPost]
-		public HttpStatusCode CreateNewPerson(String firstName, String lastName)
+		public HttpStatusCode CreateNewPerson( String firstName, String lastName )
 		{
 			return HttpStatusCode.OK;
 		}
 
 		[HttpPost]
-		public HttpStatusCode CreatePerson(Commands.NewPersonCommand command)
+		public HttpStatusCode CreatePerson( Commands.NewPersonCommand command )
 		{
 			var handler = new NewPersonCommandHandler();
 			handler.Session = this.session;
 
-			handler.Execute(command);
+			handler.Execute( command );
 
 			return HttpStatusCode.OK;
 		}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		[InterceptCommandAction(HttpStatusCode.OK)]
-		public void Post(Commands.CreateNewPerson payload)
+		[InterceptCommandAction( HttpStatusCode.OK )]
+		public void Post( Commands.CreateNewPerson payload )
 		{
 
 		}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		public PersonView Get(int id)
+		public PersonView Get( int id )
 		{
-			var view = this.session.LoadPersonViewById("People/" + id);
+			var view = this.session.LoadPersonViewById( "People/" + id );
+			return view;
+		}
+
+		public PagedResultsView<PersonView> Get( int p = 0, int s = 10 )
+		{
+			var view = this.session.GetPersonViews( p, s );
+
 			return view;
 		}
 	}

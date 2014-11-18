@@ -36,8 +36,9 @@
     <Reference Include="Jason.Tools">
       <HintPath>..\packages\Jason.Tools.0.4.0.1-Beta\lib\net40\Jason.Tools.dll</HintPath>
     </Reference>
-    <Reference Include="Radical">
-      <HintPath>..\packages\Radical.1.5.0.0-alfa\lib\net45\Radical.dll</HintPath>
+    <Reference Include="Radical, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Radical.1.5.0.0\lib\net45\Radical.dll</HintPath>
     </Reference>
     <Reference Include="Raven.Abstractions">
       <HintPath>..\packages\RavenDB.Client.3.0.3507-Unstable\lib\net45\Raven.Abstractions.dll</HintPath>

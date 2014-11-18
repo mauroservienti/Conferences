@@ -16,7 +16,7 @@ namespace CQRS
 		protected void Application_Start()
 		{
 			var path = Path.Combine( AppDomain.CurrentDomain.BaseDirectory, "bin" );
-			var bootstrapper = new WindsorBootstrapper( path, "Shopper*" );
+			var bootstrapper = new WindsorBootstrapper( path, "CQ*" );
 			var container = bootstrapper.Boot();
 
 			GlobalConfiguration.Configure( cfg =>

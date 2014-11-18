@@ -59,7 +59,7 @@
     </Reference>
     <Reference Include="Jason.WebAPI, Version=0.5.1.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Jason.WebAPI.0.5.1.1-Beta-3\lib\net45\Jason.WebAPI.dll</HintPath>
+      <HintPath>..\packages\Jason.WebAPI.0.5.1.1-Beta-5\lib\net45\Jason.WebAPI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Owin, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -74,8 +74,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Radical">
-      <HintPath>..\packages\Radical.1.5.0.0-alfa\lib\net45\Radical.dll</HintPath>
+    <Reference Include="Radical, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Radical.1.5.0.0\lib\net45\Radical.dll</HintPath>
     </Reference>
     <Reference Include="Radical.Bootstrapper">
       <HintPath>..\packages\Radical.Bootstrapper.0.0.3.4\lib\net45\Radical.Bootstrapper.dll</HintPath>
@@ -172,6 +173,7 @@
   <ItemGroup>
     <Compile Include="App_Start\JasonConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CompaniesController.cs" />
     <Compile Include="Controllers\PeopleController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Global.asax.cs">

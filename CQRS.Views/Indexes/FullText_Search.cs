@@ -37,19 +37,24 @@ namespace CQRS.Views.Indexes
 										 } );
 
 			this.AddMap<Company>( docs => from doc in docs
-										 select new SearchMap
-										 {
-											 Id = doc.Id,
-											 EntityType = this.MetadataFor( doc )[ "Raven-Entity-Name" ].ToString(),
-											 Content = new[] 
+										  select new SearchMap
+										  {
+											  Id = doc.Id,
+											  EntityType = this.MetadataFor( doc )[ "Raven-Entity-Name" ].ToString(),
+											  Content = new[] 
 											 {
 												 doc.Name,
 												 doc.VatNumber
 											 },
-											 DisplayName = doc.Name + " (" + doc.VatNumber + ")"
-										 } );
+											  DisplayName = doc.Name + " (" + doc.VatNumber + ")"
+										  } );
 
-			this.StoreAllFields( FieldStorage.Yes );
+			this.Store( m => m.DisplayName, FieldStorage.Yes );
+			this.Store( m => m.EntityType, FieldStorage.Yes );
+			this.Store( m => m.Id, FieldStorage.Yes );
+
+			this.Suggestion( m => m.Content );
+			this.Suggestion( m => m.DisplayName );
 		}
 	}
 }
