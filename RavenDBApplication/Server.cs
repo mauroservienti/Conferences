@@ -44,8 +44,14 @@ namespace RavenDBApplication
 			};
 
 			var strategy = new ShardStrategy( shards );
+
+
 			strategy.ShardingOn<Model.Company>();
 			strategy.ShardingOn<Model.Person>();
+
+
+
+
 			strategy.ShardingOn<Model.Product>( p => p.Id, id => "S03" );
 			strategy.ShardingOn<Model.Order>( o => o.Customer.Type, t =>
 			{

@@ -9,6 +9,7 @@ namespace RavenDBApplication.Model
 	public class Person
 	{
 		public String Id { get; private set; }
+
 		public String FirstName { get; set; }
 
 		public String LastName { get; set; }

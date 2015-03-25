@@ -63,7 +63,7 @@ namespace RavenDBApplication.Indexes
 												{
 													Id = doc.Id,
 													Description = "Product: " + doc.Id + " for " + doc.Name,
-													Type = "Orders",
+													Type = "Products",
 													Content = new Object[] 
 												  {
 													doc.Name,

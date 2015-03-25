@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Raven.Client.Indexes;
 using RavenDBApplication.Model;
+using Raven.Abstractions.Indexing;
 
 namespace RavenDBApplication.Indexes
 {
@@ -15,8 +16,9 @@ namespace RavenDBApplication.Indexes
 			this.Map = docs => from doc in docs
 							   select new
 							   {
-								   doc.Name,
-								   _ = doc.Attributes.Select( a => CreateField( a.Name, a.FieldValue, false, true ) )
+								   Name = doc.Name,
+								   _ = doc.Attributes.Select( a => 
+									   CreateField( a.Name, a.FieldValue, false, true ) )
 							   };
 		}
 	}
