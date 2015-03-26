@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RavenDBApplication", "RavenDBApplication\RavenDBApplication.csproj", "{CEEB7EA5-1FD1-44C2-A1E7-B5F94A48743C}"
 EndProject
@@ -9,6 +9,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		Readme.md = Readme.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetupRavenDBData", "SetupRavenDBData\SetupRavenDBData.csproj", "{9B91F228-BA0B-4C99-B65E-D3AEBCC55B02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RavenDBCommon", "RavenDBCommon\RavenDBCommon.csproj", "{8265E978-2FD1-4909-B8AF-377C51BBBEA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +24,14 @@ Global
 		{CEEB7EA5-1FD1-44C2-A1E7-B5F94A48743C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEEB7EA5-1FD1-44C2-A1E7-B5F94A48743C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEEB7EA5-1FD1-44C2-A1E7-B5F94A48743C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B91F228-BA0B-4C99-B65E-D3AEBCC55B02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B91F228-BA0B-4C99-B65E-D3AEBCC55B02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B91F228-BA0B-4C99-B65E-D3AEBCC55B02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B91F228-BA0B-4C99-B65E-D3AEBCC55B02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8265E978-2FD1-4909-B8AF-377C51BBBEA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8265E978-2FD1-4909-B8AF-377C51BBBEA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8265E978-2FD1-4909-B8AF-377C51BBBEA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8265E978-2FD1-4909-B8AF-377C51BBBEA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

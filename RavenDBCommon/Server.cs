@@ -11,7 +11,7 @@ using Raven.Client.Shard;
 
 namespace RavenDBApplication
 {
-	static class Server
+	public static class Server
 	{
 		public static IDocumentStore CreateDocumentStore()
 		{
