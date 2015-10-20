@@ -1,1 +1,0 @@
-﻿This is the default templates folder for the item-template directive
