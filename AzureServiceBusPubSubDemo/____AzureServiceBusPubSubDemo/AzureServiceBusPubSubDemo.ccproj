@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>2.8</ProductVersion>
-    <ProjectGuid>12f25015-6a30-4878-9c97-cac14c9a6e20</ProjectGuid>
+    <ProductVersion>2.7</ProductVersion>
+    <ProjectGuid>8cd10ed5-f85c-4a3f-8ee9-64d2033f3abf</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AzureCloudService1</RootNamespace>
-    <AssemblyName>AzureCloudService1</AssemblyName>
+    <RootNamespace>AzureServiceBusPubSubDemo</RootNamespace>
+    <AssemblyName>AzureServiceBusPubSubDemo</AssemblyName>
     <StartDevelopmentStorage>True</StartDevelopmentStorage>
     <Name>AzureServiceBusPubSubDemo</Name>
   </PropertyGroup>
@@ -85,7 +85,7 @@
   <!-- Import the target files for this project template -->
   <PropertyGroup>
     <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
-    <CloudExtensionsDir Condition=" '$(CloudExtensionsDir)' == '' ">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Windows Azure Tools\2.8\</CloudExtensionsDir>
+    <CloudExtensionsDir Condition=" '$(CloudExtensionsDir)' == '' ">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Windows Azure Tools\2.7\</CloudExtensionsDir>
   </PropertyGroup>
   <Import Project="$(CloudExtensionsDir)Microsoft.WindowsAzure.targets" />
 </Project>
