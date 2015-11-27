@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "AzureServiceBusPubSubDemo", "AzureServiceBusPubSubDemo\AzureServiceBusPubSubDemo.ccproj", "{8CD10ED5-F85C-4A3F-8EE9-64D2033F3ABF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackendPublisherWorker", "BackendPublisherWorker\BackendPublisherWorker.csproj", "{71E5034C-EFE7-4B9E-AA09-ECAC7EBE53F8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackendSubscriberWorker", "BackendSubscriberWorker\BackendSubscriberWorker.csproj", "{E158914C-BF94-45F2-AF74-FEA9133DEAF4}"
@@ -24,16 +22,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Subscribers", "Subscribers"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedServiceBusManagement", "SharedServiceBusManagement\SharedServiceBusManagement.csproj", "{05414F54-A103-4D46-ADF7-2AC3011E56B6}"
 EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "AzureServiceBusPubSubDemo", "AzureServiceBusPubSubDemo\AzureServiceBusPubSubDemo.ccproj", "{12F25015-6A30-4878-9C97-CAC14C9A6E20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8CD10ED5-F85C-4A3F-8EE9-64D2033F3ABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8CD10ED5-F85C-4A3F-8EE9-64D2033F3ABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8CD10ED5-F85C-4A3F-8EE9-64D2033F3ABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8CD10ED5-F85C-4A3F-8EE9-64D2033F3ABF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{71E5034C-EFE7-4B9E-AA09-ECAC7EBE53F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{71E5034C-EFE7-4B9E-AA09-ECAC7EBE53F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71E5034C-EFE7-4B9E-AA09-ECAC7EBE53F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -58,6 +54,10 @@ Global
 		{05414F54-A103-4D46-ADF7-2AC3011E56B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05414F54-A103-4D46-ADF7-2AC3011E56B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05414F54-A103-4D46-ADF7-2AC3011E56B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12F25015-6A30-4878-9C97-CAC14C9A6E20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12F25015-6A30-4878-9C97-CAC14C9A6E20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12F25015-6A30-4878-9C97-CAC14C9A6E20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12F25015-6A30-4878-9C97-CAC14C9A6E20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

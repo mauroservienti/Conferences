@@ -1,5 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ServiceDefinition name="AzureCloudService1" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2015-04.2.6">
+<ServiceDefinition name="AzureServiceBusPubSubDemo" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2015-04.2.6">
+  <WorkerRole name="BackendPublisherWorker" vmsize="Small">
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+      <Setting name="Microsoft.ServiceBus.ConnectionString" />
+      <Setting name="InputQueueName" />
+      <Setting name="WebFrontendQueueName" />
+      <Setting name="PublisherTopicName" />
+    </ConfigurationSettings>
+  </WorkerRole>
+  <WorkerRole name="BackendSubscriberWorker" vmsize="Small">
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+      <Setting name="Microsoft.ServiceBus.ConnectionString" />
+      <Setting name="PublisherTopicName" />
+      <Setting name="WebFrontendQueueName" />
+    </ConfigurationSettings>
+  </WorkerRole>
+  <WorkerRole name="AnotherBackendSubscriberWorker" vmsize="Small">
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+      <Setting name="Microsoft.ServiceBus.ConnectionString" />
+      <Setting name="PublisherTopicName" />
+      <Setting name="WebFrontendQueueName" />
+    </ConfigurationSettings>
+  </WorkerRole>
   <WebRole name="WebFrontend" vmsize="Small">
     <Sites>
       <Site name="Web">
@@ -18,29 +43,4 @@
       <InputEndpoint name="Endpoint1" protocol="http" port="80" />
     </Endpoints>
   </WebRole>
-  <WorkerRole name="AnotherBackendSubscriberWorker" vmsize="Small">
-    <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
-      <Setting name="Microsoft.ServiceBus.ConnectionString" />
-      <Setting name="PublisherTopicName" />
-      <Setting name="WebFrontendQueueName" />
-    </ConfigurationSettings>
-  </WorkerRole>
-  <WorkerRole name="BackendPublisherWorker" vmsize="Small">
-    <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
-      <Setting name="Microsoft.ServiceBus.ConnectionString" />
-      <Setting name="InputQueueName" />
-      <Setting name="WebFrontendQueueName" />
-      <Setting name="PublisherTopicName" />
-    </ConfigurationSettings>
-  </WorkerRole>
-  <WorkerRole name="BackendSubscriberWorker" vmsize="Small">
-    <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
-      <Setting name="Microsoft.ServiceBus.ConnectionString" />
-      <Setting name="PublisherTopicName" />
-      <Setting name="WebFrontendQueueName" />
-    </ConfigurationSettings>
-  </WorkerRole>
 </ServiceDefinition>
