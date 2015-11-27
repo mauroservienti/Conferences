@@ -76,12 +76,6 @@
     <Folder Include="BackendSubscriberWorkerContent\" />
     <Folder Include="WebFrontendContent\" />
   </ItemGroup>
-  <ItemGroup>
-    <DiagnosticsConfiguration Include="AnotherBackendSubscriberWorkerContent\diagnostics.wadcfgx" />
-    <DiagnosticsConfiguration Include="BackendPublisherWorkerContent\diagnostics.wadcfgx" />
-    <DiagnosticsConfiguration Include="BackendSubscriberWorkerContent\diagnostics.wadcfgx" />
-    <DiagnosticsConfiguration Include="WebFrontendContent\diagnostics.wadcfgx" />
-  </ItemGroup>
   <!-- Import the target files for this project template -->
   <PropertyGroup>
     <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
